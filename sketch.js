@@ -20,9 +20,7 @@ function setup(){
 
  polygon=Bodies.rectangle(100,100,50,50);
  World.add(world,polygon);
- textSize(32);
-    
- text("Press SPACE to get chances",200,200);
+
  
  ground1=new Ground(300,450);
  ground2=new Ground(600,265);
@@ -80,7 +78,12 @@ function draw(){
  
  pos=polygon.position;
  image(polygonImage,pos.x,pos.y,50,50);
-
+ push();
+ textSize(20);
+ stroke("blue");
+ text("Click and drag the polygon to hit the blocks",250,50);
+ text("Press SPACE to get chances",300,100);
+ pop();
 
  ground1.display();
  ground2.display();
