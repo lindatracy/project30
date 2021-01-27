@@ -24,7 +24,7 @@ function setup(){
  
  
  ground1=new Ground(300,450);
- ground2=new Ground(600,280);
+ ground2=new Ground(600,265);
  
  box1=new box(250,425);
  box1.color="red";
@@ -41,13 +41,13 @@ function setup(){
  box9=new box(310,345);
  box9.color="blue"
  box10=new box(295,305);
- box10.color="rose"
+ box10.color="white"
 
- box11=new box(550,275);
- box12=new box(580,275);
- box13=new box(610,275);
+ box11=new box(550,260);
+ box12=new box(580,260);
+ box13=new box(610,260);
  box13.color="red";
- box14=new box(640,275);
+ box14=new box(640,260);
  box15=new box(565,185);
  box16=new box(595,185);
  box16.color="violet"
@@ -60,7 +60,7 @@ function setup(){
 
  sling=new Slingshot(polygon,{x:200,y:100})
 
- var render = Render.create({
+ /*var render = Render.create({
     element: document.body,
     engine: engine,
     options: {
@@ -68,10 +68,10 @@ function setup(){
       height: 600,
       wireframes: false
     }
-  });
+  });*/
   console.log(polygon)
 
- Render.run(render);
+ //Render.run(render);
 }
 function draw(){
  background(0);
@@ -114,3 +114,8 @@ function mouseDragged(){
 function mouseReleased(){
   sling.fly();
 }
+
+function keyPressed(){
+  if(keyCode===32){
+  sling.attach(polygon);
+}}
