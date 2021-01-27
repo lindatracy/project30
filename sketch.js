@@ -20,8 +20,9 @@ function setup(){
 
  polygon=Bodies.rectangle(100,100,50,50);
  World.add(world,polygon);
- 
- 
+ textSize(32);
+    
+ text("Press SPACE to get chances",200,200);
  
  ground1=new Ground(300,450);
  ground2=new Ground(600,265);
@@ -74,7 +75,7 @@ function setup(){
  //Render.run(render);
 }
 function draw(){
- background(0);
+ background(255);
  Engine.update(engine);
  
  pos=polygon.position;
